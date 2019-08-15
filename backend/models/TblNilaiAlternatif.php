@@ -57,4 +57,8 @@ class TblNilaiAlternatif extends \yii\db\ActiveRecord
     {
         return $this->hasOne(TblAlternatif::className(), ['id_alternatif' => 'id_alternatif']);
     }
+    public function getKriteria()
+    {
+        return $this->hasOne(TblKriteria::className(), ['id_kriteria' => 'id_kriteria']);
+    }
 }

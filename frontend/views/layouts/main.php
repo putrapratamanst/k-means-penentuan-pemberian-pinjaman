@@ -36,7 +36,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Pengajuan', 'url' => ['/tbl-nilai-alternatif/index']],
+        ['label' => 'Pengajuan', 'url' => ['/pengajuan/index']],
         // ['label' => 'About', 'url' => ['/site/about']],
         // ['label' => 'Contact', 'url' => ['/site/contact']],
     ];

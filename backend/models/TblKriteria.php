@@ -56,4 +56,10 @@ class TblKriteria extends \yii\db\ActiveRecord
         return "KR-" . $result;
     }
 
+    public function getSubKriteria()
+    {
+        return $this->hasOne(TblSubKriteria::className(), ['id_kriteria' => 'id_kriteria']);
+    }
+
+
 }

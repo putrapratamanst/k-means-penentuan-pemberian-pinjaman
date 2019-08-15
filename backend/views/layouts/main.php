@@ -57,6 +57,15 @@ AppAsset::register($this);
         $menuItems = [
             ['label' => 'Home', 'url' => ['/site/index']],
             [
+                'label' => 'Kelola K-Means',
+                'items' => [
+                    ['label' => 'Kelola Data Awal', 'url' => '/pengajuan/index'],
+                    ['label' => 'Kelola Bobot', 'url' => '/pengajuan/index-bobot/'],
+                    ['label' => 'Kelola Klustering', 'url' => '/pengajuan/klustering/'],
+                    ['label' => 'Kelola Decision Tree', 'url' => '/pengajuan/tree/'],
+                ],
+            ],
+            [
                 'label' => 'Kelola Data',
                 'items' => [
                     ['label' => 'Kelola Kriteria', 'url' => '/tbl-kriteria/index/'],
