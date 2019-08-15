@@ -5,6 +5,7 @@ namespace frontend\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use frontend\models\Pengajuan;
+use Yii;
 
 /**
  * PengajuanSearch represents the model behind the search form of `frontend\models\Pengajuan`.
@@ -40,7 +41,8 @@ class PengajuanSearch extends Pengajuan
      */
     public function search($params)
     {
-        $query = Pengajuan::find();
+        $nama = Yii::$app->user->identity->username;
+        $query = Pengajuan::find()->joinWith(['alternatif'])->where(['tbl_alternatif.nm_alternatif' => $nama ]);
 
         // add conditions that should always apply here
 

@@ -48,5 +48,11 @@ class Pengajuan extends \yii\db\ActiveRecord
             'sub4' => 'Jangka Waktu',
         ];
     }
+
+    public function getAlternatif()
+    {
+        return $this->hasOne(TblAlternatif::className(), ['id_alternatif' => 'id_pensiun']);
+    }
+
     
 }

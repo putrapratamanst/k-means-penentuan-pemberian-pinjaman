@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\TblPensiunSearch;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -35,7 +36,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post','get'],
                 ],
             ],
         ];
@@ -60,7 +61,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new TblPensiunSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**
@@ -70,6 +77,8 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = "main_login";
+
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
