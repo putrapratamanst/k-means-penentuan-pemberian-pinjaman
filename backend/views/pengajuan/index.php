@@ -30,11 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             'attribute' => 'id_pensiun',
             'label' => 'id_pensiun',
-            'value' => function ($model) {
-                $namaKriteria = TblAlternatif::find()->where(['id_alternatif' => $model->id_pensiun])->one();
-                $namaKriteria = TblPensiun::find()->where(['id_pensiun' => $namaKriteria->id_pensiun])->one();
-                return $namaKriteria->nm_pensiun;
-            }
+            // 'value' => function ($model) {
+            //     $namaKriteria = TblAlternatif::find()->where(['id_alternatif' => $model->id_pensiun])->one();
+            //     $namaKriteria = TblPensiun::find()->where(['id_pensiun' => $namaKriteria->id_pensiun])->one();
+            //     return $namaKriteria->nm_pensiun;
+            // }
         ],
                 
 

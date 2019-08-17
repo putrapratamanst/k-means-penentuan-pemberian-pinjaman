@@ -85,6 +85,12 @@ class TblPensiun extends \yii\db\ActiveRecord
         return $this->hasMany(TblAlternatif::className(), ['id_pensiun' => 'id_pensiun']);
     }
 
+    public function getPengajuan()
+    {
+        return $this->hasOne(Pengajuan::className(), ['id_pensiun' => 'id_pensiun']);
+    }
+
+
     public function reformattedPensiun()
     {
         $id     = $this->find()->max('RIGHT(id_pensiun,4)');

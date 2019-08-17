@@ -39,7 +39,7 @@ class TblPensiunSearch extends TblPensiun
      */
     public function search($params)
     {
-        $query = TblPensiun::find();
+        $query = TblPensiun::find()->joinWith('pengajuan');
 
         // add conditions that should always apply here
 

@@ -129,6 +129,30 @@ class TblPensiunController extends Controller
         ]);
     }
 
+    public function actionDiterima($id)
+    {
+        $model = $this->findModel($id);
+        $model->status_pensiun = "Diterima";
+        $model->save();
+        return $this->redirect('/site/index');
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionPengajuan($id)
+    {
+        $model = $this->findModel($id);
+        $model->status_pensiun = "Pengajuan";
+        $model->save();
+        return $this->redirect('/site/index');
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Deletes an existing TblPensiun model.
      * If deletion is successful, the browser will be redirected to the 'index' page.

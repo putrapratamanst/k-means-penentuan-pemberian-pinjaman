@@ -14,12 +14,22 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/pengajuan/index"><i class="fa fa-circle-o"></i> Kelola Data Awal</a></li>
-                            <li><a href="/pengajuan/index/bobot"><i class="fa fa-circle-o"></i> Kelola BObot</a></li>
-                            <li><a href="/pengajuan/klustering"><i class="fa fa-circle-o"></i> Kelola Klustering</a></li>
-                            <li><a href="/pengajuan/tree/"><i class="fa fa-circle-o"></i> Kelola Decision Tree</a></li>
                             <li><a href="/tbl-kriteria/index/"><i class="fa fa-circle-o"></i> Kelola Kriteria</a></li>
                             <li><a href="/tbl-alternatif/index/"><i class="fa fa-circle-o"></i> Kelola Alternatif</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview menu">
+                        <a href="#">
+                            <i class="fa fa-eye"></i> <span>Kelola K-Means</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/pengajuan/index-awal"><i class="fa fa-circle-o"></i> Kelola Data Awal</a></li>
+                            <li><a href="/pengajuan/index-bobot"><i class="fa fa-circle-o"></i> Kelola Bobot</a></li>
+                            <li><a href="/pengajuan/klustering"><i class="fa fa-circle-o"></i> Kelola Klustering</a></li>
+                            <li><a href="/pengajuan/tree/"><i class="fa fa-circle-o"></i> Kelola Decision Tree</a></li>
                         </ul>
                     </li>
                     <?php } ?>

@@ -64,7 +64,7 @@ class KmeansController extends Controller
 
 
                 # code...
-                echo"<pre>";die(print_r($data));
+                // echo"<pre>";die(print_r($data));
             }
         }
 

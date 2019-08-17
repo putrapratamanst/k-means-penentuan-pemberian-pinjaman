@@ -60,6 +60,7 @@ class TblAlternatif extends \yii\db\ActiveRecord
         return $this->hasOne(TblPensiun::className(), ['id_pensiun' => 'id_pensiun']);
     }
 
+
     /**
      * @return \yii\db\ActiveQuery
      */

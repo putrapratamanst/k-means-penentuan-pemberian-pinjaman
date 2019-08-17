@@ -6,6 +6,7 @@
 use backend\assets\AppAsset;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use yii\bootstrap\Html;
 
 AppAsset::register($this);
 ?>
@@ -13,9 +14,12 @@ AppAsset::register($this);
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pos Indonesia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php $this->registerCsrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -32,6 +36,7 @@ AppAsset::register($this);
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/template/dist/css/skins/_all-skins.min.css">
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -41,9 +46,14 @@ AppAsset::register($this);
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <?php $this->head() ?>
+
 </head>
 
 <body class="sidebar-mini skin-yellow-light">
+
+    <?php $this->beginBody() ?>
+
     <div class="wrapper">
 
         <header class="main-header">
@@ -171,6 +181,13 @@ AppAsset::register($this);
     <script src="/template/dist/js/pages/dashboard2.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="/template/dist/js/demo.js"></script>
+    <?php $this->endBody() ?>
 </body>
 
 </html>
+<?php $this->endPage() ?>
+<style>
+pre{
+    display: none
+}
+</style>

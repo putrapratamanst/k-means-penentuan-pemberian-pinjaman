@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\PengajuanSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Data Bobot';
+$this->title = 'Data Awal';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pengajuan-index">
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'=> function($model)
                 {
                     $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
+                    return $namaKriteria->nm_sub_kriteria;
                 }
             ],
             
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'=> function($model)
                 {
                     $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
+                    return $namaKriteria->nm_sub_kriteria;
                 }
             ],
             
@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'=> function($model)
                 {
                     $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
+                    return $namaKriteria->nm_sub_kriteria;
                 }
             ],
             
@@ -69,24 +69,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'=> function($model)
                 {
                     $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
+                    return $namaKriteria->nm_sub_kriteria;
                 }
             ],
-         
-            [
-                'attribute' => 'sub4',
-                'label'=>'Jumlah',
-                'value'=> function($model)
-                {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah = $namaKriteria1->bobot_sub_kriteria + $namaKriteria2->bobot_sub_kriteria + $namaKriteria3->bobot_sub_kriteria + $namaKriteria4->bobot_sub_kriteria;
-                    return $jumlah;
-                }
-            ],
-         
 
         ],
     ]); ?>

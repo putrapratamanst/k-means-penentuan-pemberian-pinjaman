@@ -2,16 +2,22 @@
 
 /* @var $this yii\web\View */
 
+use frontend\models\TblPensiun;
+
 $this->title = 'My Yii Application';
+?>
+<?php
+$nama = Yii::$app->user->identity->username;
+$dataPensiun = TblPensiun::find()->where(['nm_pensiun' =>$nama ])->one();
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+    <div class="jumbotron" style="padding:50px">
+        <h1>Selamat Datang!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Halamant Pengajuan Kredit Pos Indonesia.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-danger" href="http://www.yiiframework.com">Status : <?=$dataPensiun->status_pensiun?></a></p>
     </div>
 
     <div class="body-content">

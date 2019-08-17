@@ -48,4 +48,16 @@ class Pengajuan extends \yii\db\ActiveRecord
             'sub4' => 'Jangka Waktu',
         ];
     }
+
+    public function getSubKriteria()
+    {
+        return $this->hasOne(Pengajuan::className(), ['id_pensiun' => 'id_pensiun']);
+    }
+
+    public function getPensiun()
+    {
+        return $this->hasOne(TblPensiun::className(), ['id_pensiun' => 'id_pensiun']);
+    }
+
+
 }
