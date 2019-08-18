@@ -40,7 +40,8 @@ class PengajuanSearch extends Pengajuan
      */
     public function search($params)
     {
-        $query = Pengajuan::find()->joinWith('pensiun')->where(['status_pensiun' => "Diterima"]);
+        $query = Pengajuan::find()->joinWith('pensiun');
+        // $query = Pengajuan::find()->joinWith('pensiun')->where(['status_pensiun' => "Diterima"]);
 
         // add conditions that should always apply here
 

@@ -38,7 +38,7 @@
 
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="header">MAIN NAVIGATION</li>
-                        <li><a href="/"><i class="fa fa-home"></i> Beranda </a></li>
+                        <li><a href="/pengajuan/tree-result"><i class="fa fa-home"></i> Decision Tree </a></li>
 
                         <li class="treeview menu">
                             <a href="#">
@@ -53,33 +53,33 @@
                         </li>
                         <?php } ?>
                         <?php
-                    if (Yii::$app->user->identity->username == "admin123") {
-                        ?>
+                        if (Yii::$app->user->identity->username == "admin123") {
+                            ?>
 
-                    <ul class="sidebar-menu" data-widget="tree">
-                        <li class="header">MAIN NAVIGATION</li>
-                        <li><a href="/"><i class="fa fa-home"></i> Beranda </a></li>
+                        <ul class="sidebar-menu" data-widget="tree">
+                            <li class="header">MAIN NAVIGATION</li>
+                            <li><a href="/tbl-user/index"><i class="fa fa-home"></i> Beranda </a></li>
 
-                        <li class="treeview menu">
-                            <a href="#">
-                                <i class="fa fa-edit"></i> <span>Kelola Data</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="/tbl-pensiun/index"><i class="fa fa-circle-o"></i> Kelola Pensiun</a></li>
-                                <li><a href="/tbl-user/index"><i class="fa fa-circle-o"></i> Kelola User</a></li>
-                            </ul>
-                        </li>
-                        <?php } ?>
-                        <?php
-                        if (!Yii::$app->user->isGuest) { ?>
+                            <li class="treeview menu">
+                                <a href="#">
+                                    <i class="fa fa-edit"></i> <span>Kelola Data</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="/tbl-pensiun/index"><i class="fa fa-circle-o"></i> Kelola Pensiun</a></li>
+                                    <li><a href="/tbl-user/index"><i class="fa fa-circle-o"></i> Kelola User</a></li>
+                                </ul>
+                            </li>
+                            <?php } ?>
+                            <?php
+                            if (!Yii::$app->user->isGuest) { ?>
 
-                        <li><a href="/site/logout"><i class="fa fa-circle-o"></i> Logout</a></li>
-                        <?php } ?>
+                            <li><a href="/site/logout"><i class="fa fa-circle-o"></i> Logout</a></li>
+                            <?php } ?>
 
-                        <!-- <li class="treeview">
+                            <!-- <li class="treeview">
                         <a href="#">
                             <i class="fa fa-files-o"></i>
                             <span>Layout Options</span>
@@ -230,4 +230,4 @@
                             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                         </ul>
                     </li> -->
-                    </ul>
+                        </ul>

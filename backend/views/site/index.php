@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\TblPensiunSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Pensiuns';
+$this->title = ' Daftar Pensiun';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-pensiun-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Tbl Pensiun', ['/tbl-pensiun/create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Pensiun', ['/tbl-pensiun/create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); 
@@ -131,8 +131,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
             ],
             'template' => '{status}'
-
-
         ],        
         ],
     ]); ?>

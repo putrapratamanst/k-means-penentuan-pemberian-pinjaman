@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Pengajuan */
 
-$this->title = $model->id;
+$this->title = Yii::$app->user->identity->username;
 $this->params['breadcrumbs'][] = ['label' => 'Pengajuans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
