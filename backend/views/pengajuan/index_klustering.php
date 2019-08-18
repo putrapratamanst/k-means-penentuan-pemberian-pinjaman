@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider0,
         // 'filterModel' => $searchModel,
-        // 'summary' => '',
+        'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -66,170 +66,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'jangka_waktu',
             'dc2',
             'dc1',
-            'c1',
-            'c2',
-
-
-            // [
-            //     'attribute' => 'sub1',
-            //     'label' => 'Penghasilan',
-            //     'value' => function ($model) {
-            //         $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-            //         return $namaKriteria->bobot_sub_kriteria;
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub2',
-            //     'label' => 'Penghasilan',
-            //     'value' => function ($model) {
-            //         $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-            //         return $namaKriteria->bobot_sub_kriteria;
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub3',
-            //     'label' => 'Penghasilan',
-            //     'value' => function ($model) {
-            //         $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-            //         return $namaKriteria->bobot_sub_kriteria;
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub4',
-            //     'label' => 'Penghasilan',
-            //     'value' => function ($model) {
-            //         $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-            //         return $namaKriteria->bobot_sub_kriteria;
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub4',
-            //     'label' => 'Jumlah',
-            //     'value' => function ($model) {
-            //         $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-            //         $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-            //         $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-            //         $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-            //         $jumlah = $namaKriteria1->bobot_sub_kriteria + $namaKriteria2->bobot_sub_kriteria + $namaKriteria3->bobot_sub_kriteria + $namaKriteria4->bobot_sub_kriteria;
-            //         return $jumlah;
-            //     }
-            // ],
-            // [
-            //     'attribute' => 'sub4',
-            //     'label' => 'DC1',
-            //     'value' => function ($model) {
-            //         $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-            //         $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-            //         $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-            //         $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-            //         $jumlah =
-            //             sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-            //         return $jumlah;
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub4',
-            //     'label' => 'DC2',
-            //     'value' => function ($model) {
-            //         $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-            //         $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-            //         $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-            //         $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-            //         $jumlah =
-            //             sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4), 2)
-            //                 +
-            //                 pow(($namaKriteria2->bobot_sub_kriteria - 3), 2)
-            //                 +
-            //                 pow(($namaKriteria3->bobot_sub_kriteria - 4), 2)
-            //                 +
-            //                 pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-            //         return $jumlah;
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub4',
-            //     'label' => 'Layak',
-            //     'value' => function ($model) {
-            //         $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-            //         $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-            //         $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-            //         $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-            //         $jumlah1 =
-            //             sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-
-            //         $jumlah2 =
-            //             sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4), 2)
-            //                 +
-            //                 pow(($namaKriteria2->bobot_sub_kriteria - 3), 2)
-            //                 +
-            //                 pow(($namaKriteria3->bobot_sub_kriteria - 4), 2)
-            //                 +
-            //                 pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-
-            //         if ($jumlah1 < $jumlah2) {
-            //             return "1";
-            //         } else {
-            //             return "";
-            //         }
-            //     }
-            // ],
-
-            // [
-            //     'attribute' => 'sub4',
-            //     'label' => 'Tidak Layak',
-            //     'value' => function ($model) {
-            //         $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-            //         $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-            //         $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-            //         $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-            //         $jumlah1 =
-            //             sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4), 2)
-            //                 +
-            //                 pow(($namaKriteria2->bobot_sub_kriteria - 3), 2)
-            //                 +
-            //                 pow(($namaKriteria3->bobot_sub_kriteria - 4), 2)
-            //                 +
-            //                 pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-            //         $jumlah2 =
-            //             sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-            //                 +
-            //                 pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-
-            //         if ($jumlah1 < $jumlah2) {
-            //             return "1";
-            //         } else {
-            //             return "";
-            //         }
-            //     }
-            // ],
+                        [
+                'attribute' => 'c1',
+                'label' => 'C1 (Layak)',
+            ],
+            [
+                'attribute' => 'c2',
+                'label' => 'C2 (Tidak Layak)',
+            ],
 
         ],
     ]); ?>
@@ -261,209 +105,51 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         <tr>
             <td>C1</td>
-            <td>4.96428571428571
+            <td><?= $centroidMaxPengulangan1['penghasilan']; ?> </td>
+            <td><?= $centroidMaxPengulangan1['usia']; ?>
             </td>
-            <td>4.96428571428571
+            <td><?= $centroidMaxPengulangan1['besar_pinjaman']; ?>
             </td>
-            <td>4.96428571428571
-            </td>
-            <td>4.92857142857143
+            <td><?= $centroidMaxPengulangan1['jangka_waktu']; ?>
             </td>
         </tr>
         <tr>
             <td>C2</td>
-            <td>4.26190476190476
+            <td><?= $centroidMinPengulangan1['penghasilan']; ?> </td>
+            <td><?= $centroidMinPengulangan1['usia']; ?>
             </td>
-            <td>3.38095238095238
+            <td><?= $centroidMinPengulangan1['besar_pinjaman']; ?>
             </td>
-            <td>4.0952380952381
-            </td>
-            <td>4.0952380952381
+            <td><?= $centroidMinPengulangan1['jangka_waktu']; ?>
             </td>
         </tr>
 
     </table>
 
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
+        'dataProvider' => $dataProvider1,
         // 'filterModel' => $searchModel,
+        'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            // 'id',
+
+            'penghasilan',
+            'usia',
+            'besar_pinjaman',
+            'jangka_waktu',
+            'dc2',
+            'dc1',
+                        [
+                'attribute' => 'c1',
+                'label' => 'C1 (Layak)',
+            ],
             [
-                'attribute' => 'id_pensiun',
-                'label' => 'id_pensiun',
-                // 'value' => function ($model) {
-                //     $namaKriteria = TblAlternatif::find()->where(['id_alternatif' => $model->id_pensiun])->one();
-                //     $namaKriteria = TblPensiun::find()->where(['id_pensiun' => $namaKriteria->id_pensiun])->one();
-                //     return $namaKriteria->nm_pensiun;
-                // }
+                'attribute' => 'c2',
+                'label' => 'C2 (Tidak Layak)',
             ],
 
 
-            [
-                'attribute' => 'sub1',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub2',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub3',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Jumlah',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah = $namaKriteria1->bobot_sub_kriteria + $namaKriteria2->bobot_sub_kriteria + $namaKriteria3->bobot_sub_kriteria + $namaKriteria4->bobot_sub_kriteria;
-                    return $jumlah;
-                }
-            ],
-            [
-                'attribute' => 'sub4',
-                'label' => 'DC1',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4.92857142857143), 2));
-
-                    return $jumlah;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'DC2',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.26190476190476), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.38095238095238), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.0952380952381), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4.0952380952381), 2));
-
-                    return $jumlah;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Layak',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah1 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4.92857142857143), 2));
-
-
-                    $jumlah2 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.26190476190476), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.38095238095238), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.0952380952381), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4.0952380952381), 2));
-
-
-                    if ($jumlah1 < $jumlah2) {
-                        return "1";
-                    } else {
-                        return "";
-                    }
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Tidak Layak',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah1 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.96428571428571), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4.92857142857143), 2));
-
-
-                    $jumlah2 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.26190476190476), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.38095238095238), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.0952380952381), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4.0952380952381), 2));
-
-
-
-                    if ($jumlah1 > $jumlah2) {
-                        return "1";
-                    } else {
-                        return "";
-                    }
-                }
-            ],
 
         ],
     ]); ?>
@@ -497,208 +183,48 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         <tr>
             <td>C1</td>
-            <td>5
+            <td><?= $centroidMaxPengulangan2['penghasilan']; ?> </td>
+            <td><?= $centroidMaxPengulangan2['usia']; ?>
             </td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
+            <td><?= $centroidMaxPengulangan2['besar_pinjaman']; ?>
+            </td>
+            <td><?= $centroidMaxPengulangan2['jangka_waktu']; ?>
+            </td>
         </tr>
         <tr>
             <td>C2</td>
-            <td>4.27272727272727
-
+            <td><?= $centroidMinPengulangan2['penghasilan']; ?> </td>
+            <td><?= $centroidMinPengulangan2['usia']; ?>
             </td>
-            <td>3.43181818181818
-
+            <td><?= $centroidMinPengulangan2['besar_pinjaman']; ?>
             </td>
-            <td>4.11363636363636
-
-            </td>
-            <td>4
+            <td><?= $centroidMinPengulangan2['jangka_waktu']; ?>
             </td>
         </tr>
 
     </table>
 
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
+        'dataProvider' => $dataProvider2,
         // 'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            // 'id',
-            [
-                'attribute' => 'id_pensiun',
-                'label' => 'id_pensiun',
-                // 'value' => function ($model) {
-                //     $namaKriteria = TblAlternatif::find()->where(['id_alternatif' => $model->id_pensiun])->one();
-                //     $namaKriteria = TblPensiun::find()->where(['id_pensiun' => $namaKriteria->id_pensiun])->one();
-                //     return $namaKriteria->nm_pensiun;
-                // }
-            ],
-
-
-            [
-                'attribute' => 'sub1',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub2',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub3',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Jumlah',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah = $namaKriteria1->bobot_sub_kriteria + $namaKriteria2->bobot_sub_kriteria + $namaKriteria3->bobot_sub_kriteria + $namaKriteria4->bobot_sub_kriteria;
-                    return $jumlah;
-                }
+            'penghasilan',
+            'usia',
+            'besar_pinjaman',
+            'jangka_waktu',
+            'dc2',
+            'dc1',
+                        [
+                'attribute' => 'c1',
+                'label' => 'C1 (Layak)',
             ],
             [
-                'attribute' => 'sub4',
-                'label' => 'DC1',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-                    return $jumlah;
-                }
+                'attribute' => 'c2',
+                'label' => 'C2 (Tidak Layak)',
             ],
 
-            [
-                'attribute' => 'sub4',
-                'label' => 'DC2',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.27272727272727), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.43181818181818), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.11363636363636), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-                    return $jumlah;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Layak',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah1 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-
-                    $jumlah2 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.27272727272727), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.43181818181818), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.11363636363636), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-
-                    if ($jumlah1 < $jumlah2) {
-                        return "1";
-                    } else {
-                        return "";
-                    }
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Tidak Layak',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah1 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-
-                    $jumlah2 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.27272727272727), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.43181818181818), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.11363636363636), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-
-                    if ($jumlah1 > $jumlah2) {
-                        return "1";
-                    } else {
-                        return "";
-                    }
-                }
-            ],
 
         ],
     ]); ?>
@@ -732,208 +258,49 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         <tr>
             <td>C1</td>
-            <td>5
+            <td><?= $centroidMaxPengulangan2['penghasilan']; ?> </td>
+            <td><?= $centroidMaxPengulangan2['usia']; ?>
             </td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
+            <td><?= $centroidMaxPengulangan2['besar_pinjaman']; ?>
+            </td>
+            <td><?= $centroidMaxPengulangan2['jangka_waktu']; ?>
+            </td>
         </tr>
         <tr>
             <td>C2</td>
-            <td>4.27272727272727
-
+            <td><?= $centroidMinPengulangan2['penghasilan']; ?> </td>
+            <td><?= $centroidMinPengulangan2['usia']; ?>
             </td>
-            <td>3.43181818181818
-
+            <td><?= $centroidMinPengulangan2['besar_pinjaman']; ?>
             </td>
-            <td>4.11363636363636
-
-            </td>
-            <td>4
+            <td><?= $centroidMinPengulangan2['jangka_waktu']; ?>
             </td>
         </tr>
 
     </table>
 
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
+        'dataProvider' => $dataProvider3,
         // 'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            // 'id',
+        'penghasilan',
+        'usia',
+        'besar_pinjaman',
+        'jangka_waktu',
+        'dc2',
+        'dc1',
+                    [
+                'attribute' => 'c1',
+                'label' => 'C1 (Layak)',
+            ],
             [
-                'attribute' => 'id_pensiun',
-                'label' => 'id_pensiun',
-                // 'value' => function ($model) {
-                //     $namaKriteria = TblAlternatif::find()->where(['id_alternatif' => $model->id_pensiun])->one();
-                //     $namaKriteria = TblPensiun::find()->where(['id_pensiun' => $namaKriteria->id_pensiun])->one();
-                //     return $namaKriteria->nm_pensiun;
-                // }
+                'attribute' => 'c2',
+                'label' => 'C2 (Tidak Layak)',
             ],
 
 
-            [
-                'attribute' => 'sub1',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub2',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub3',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Penghasilan',
-                'value' => function ($model) {
-                    $namaKriteria = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    return $namaKriteria->bobot_sub_kriteria;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Jumlah',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah = $namaKriteria1->bobot_sub_kriteria + $namaKriteria2->bobot_sub_kriteria + $namaKriteria3->bobot_sub_kriteria + $namaKriteria4->bobot_sub_kriteria;
-                    return $jumlah;
-                }
-            ],
-            [
-                'attribute' => 'sub4',
-                'label' => 'DC1',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-                    return $jumlah;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'DC2',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.27272727272727), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.43181818181818), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.11363636363636), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-                    return $jumlah;
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Layak',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah1 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-
-                    $jumlah2 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.27272727272727), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.43181818181818), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.11363636363636), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-
-                    if ($jumlah1 < $jumlah2) {
-                        return "1";
-                    } else {
-                        return "";
-                    }
-                }
-            ],
-
-            [
-                'attribute' => 'sub4',
-                'label' => 'Tidak Layak',
-                'value' => function ($model) {
-                    $namaKriteria1 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1])->one();
-                    $namaKriteria2 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2])->one();
-                    $namaKriteria3 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3])->one();
-                    $namaKriteria4 = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4])->one();
-                    $jumlah1 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 5), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 5), 2));
-
-
-                    $jumlah2 =
-                        sqrt(pow(($namaKriteria1->bobot_sub_kriteria - 4.27272727272727), 2)
-                            +
-                            pow(($namaKriteria2->bobot_sub_kriteria - 3.43181818181818), 2)
-                            +
-                            pow(($namaKriteria3->bobot_sub_kriteria - 4.11363636363636), 2)
-                            +
-                            pow(($namaKriteria4->bobot_sub_kriteria - 4), 2));
-
-
-                    if ($jumlah1 > $jumlah2) {
-                        return "1";
-                    } else {
-                        return "";
-                    }
-                }
-            ],
         ],
     ]); ?>
 
