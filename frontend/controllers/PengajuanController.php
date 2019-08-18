@@ -92,8 +92,9 @@ class PengajuanController extends Controller
             $dateOfBirth = $dataPensiun->tanggal_lahir;
             $today = date("Y-m-d");
             $diff = date_diff(date_create($dateOfBirth), date_create($today));
-            $umur = $diff->format('%y'); 
+            $umur = $diff->format('%y');
 
+            $dataUmur = "";
             if($umur == 57)
             {
                 $dataUmur = "SKR-00005";
@@ -112,8 +113,9 @@ class PengajuanController extends Controller
             $dataSub1 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00001"])->all();
             $sub1     = ArrayHelper::map($dataSub1, 'id_sub_kriteria', 'nm_sub_kriteria');
 
-            $dataSub2 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00002"])->all();
-            $sub2     = ArrayHelper::map($dataSub2, 'id_sub_kriteria', 'nm_sub_kriteria');
+            // $dataSub2 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00002"])->all();
+            $sub2     = $dataUmur;
+            // $sub2     = ArrayHelper::map($dataSub2, 'id_sub_kriteria', 'nm_sub_kriteria');
 
             $dataSub3 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00003"])->all();
             $sub3     = ArrayHelper::map($dataSub3, 'id_sub_kriteria', 'nm_sub_kriteria');
@@ -121,7 +123,10 @@ class PengajuanController extends Controller
             $dataSub4 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00004"])->all();
             $sub4     = ArrayHelper::map($dataSub4, 'id_sub_kriteria', 'nm_sub_kriteria');
 
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            if ($model->load(Yii::$app->request->post())) {
+                $model->sub2 = $sub2;
+                $model->save();
                 return $this->redirect(['view', 'id' => $model->id]);
             }
 

@@ -8,6 +8,7 @@ use backend\models\TblAlternatifSearch;
 use backend\models\TblNilaiAlternatif;
 use backend\models\TblSubKriteria;
 use yii\data\ActiveDataProvider;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -23,6 +24,17 @@ class KmeansController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['*'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -36,7 +48,7 @@ class KmeansController extends Controller
      * Lists all TblAlternatif models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionInddex()
     {
         // $dataPensiun = TblNilaiAlternatif::find()
         //     ->select(
