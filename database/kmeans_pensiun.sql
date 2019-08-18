@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.27, for Linux (x86_64)
 --
--- Host: 172.29.0.3    Database: kmeans_pensiun
+-- Host: 172.29.0.4    Database: kmeans_pensiun
 -- ------------------------------------------------------
 -- Server version	5.7.27
 
@@ -63,7 +63,7 @@ CREATE TABLE `pengajuan` (
 
 LOCK TABLES `pengajuan` WRITE;
 /*!40000 ALTER TABLE `pengajuan` DISABLE KEYS */;
-INSERT INTO `pengajuan` VALUES (1,'AL-0001','SKR-00001','SKR-00006','SKR-00011','SKR-00016'),(2,'AL-0002','SKR-00001','SKR-00006','SKR-00010','SKR-00016'),(3,'AL-0003','SKR-00001','SKR-0021','SKR-00011','SKR-00016'),(4,'AL-0004','SKR-00002','SKR-00005','SKR-00010','SKR-00015'),(5,'AL-0005','SKR-00001','SKR-00005','SKR-00011','SKR-00016'),(6,'AL-0006','SKR-00002','SKR-00006','SKR-00011','SKR-00016');
+INSERT INTO `pengajuan` VALUES (1,'PN-0001','SKR-00001','SKR-00006','SKR-00011','SKR-00016'),(2,'PN-0002','SKR-00001','SKR-00006','SKR-00010','SKR-00016'),(3,'PN-0003','SKR-00001','SKR-0021','SKR-00011','SKR-00016'),(4,'PN-0004','SKR-00002','SKR-00005','SKR-00010','SKR-00015'),(5,'PN-0005','SKR-00001','SKR-00005','SKR-00011','SKR-00016'),(6,'PN-0006','SKR-00002','SKR-00006','SKR-00011','SKR-00016');
 /*!40000 ALTER TABLE `pengajuan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +180,7 @@ CREATE TABLE `tbl_pensiun` (
 
 LOCK TABLES `tbl_pensiun` WRITE;
 /*!40000 ALTER TABLE `tbl_pensiun` DISABLE KEYS */;
-INSERT INTO `tbl_pensiun` VALUES ('PN-0001','1','Hannan','1','1','939fd34b2a7d1b530edbfaee909fb74c.png','d4a101a8173e5cab76f5c60df1d7a4ba.png','2019-07-28','1','1961-03-02','1','1','Laki-laki','Pengajuan'),('PN-0002','2','Peni Purnamawati','2','2','da2fd285e7dd3f7cc726912739c82efe.png','4149ca74bf8ee6256092c3b18841a015.png','2019-08-27','2','1961-03-08','2','2','Perempuan','Pengajuan'),('PN-0003','3','Anang Prasetyo','3','3','e6152f9b9211c09811dbe952f727c029.png','028cdcec1980458b1d111c077e7f5967.png','2019-08-11','3','1959-12-27','3','3','Laki-laki','Pengajuan'),('PN-0004','4','Rahmawati Hasannah','4','4','0ecd1617c8db6eb65ecd9c6e97fda12d.png','974330038d2b59898bae93427fa120dc.png','1917-02-04','4','1962-03-30','4','4','Perempuan','Pengajuan'),('PN-0005','5','Lena Melinda','5','5','1861935114906f3a4cc22e83aaa3f44e.png','3903982714ccb5c4f203950656f1baaa.png','1909-04-25','5','1962-03-01','5','5','Perempuan','Pengajuan'),('PN-0006','6','Nia Rosnia Hadijah','6','6','313a8f9a53e3e5751a496d1adff45f70.png','6dacaf70ef5558a910bb2df255c9d543.png','2019-08-07','6','1961-06-13','6','6','Laki-laki','Pengajuan'),('PN-0007','7','Reni Husni','7','7','daf03636f1df2c07628f58dedc52fdab.png','f9eaa887bb90dfefa30e4423ef2378ca.png','2019-08-04','7','1961-06-06','7','7','Perempuan','Pengajuan'),('PN-0008','8','Farah Nugraheni','8','8','a45ef86e0d655bb9cc892a8f53393706.png','fd6aa310fd7b5cb8a66fac9186bd3c21.png','2019-05-26','8','1962-01-31','8','8','Laki-laki','Pengajuan'),('PN-0009','9','Retno Dwi','9','9','25cc9c566c688435c0fbebd2d3084673.png','c6b06ce438a359c39ba056972cf4f6f7.png','2019-04-28','9','1960-02-03','9','9','Laki-laki','Pengajuan'),('PN-0010','10','Didit Adi Darmawan','10','10','13b831713f25d9c750415302e3903ea3.png','2917f53120c00a6f85f942ce4ccd8bbc.png','2019-08-19','10','1960-03-02','10','10','Perempuan','Pengajuan'),('PN-0011','11','Michael Purwadi','11','11','70fa8c27186f338a97f5dc1b14b84c23.png','fbd76d83c01a132036116151f07c3e2c.png','2019-11-08','11','1962-03-02','11','11','Laki-laki','Pengajuan');
+INSERT INTO `tbl_pensiun` VALUES ('PN-0001','1','Hannan','1','1','939fd34b2a7d1b530edbfaee909fb74c.png','d4a101a8173e5cab76f5c60df1d7a4ba.png','2019-07-28','1','1961-03-02','1','1','Laki-laki','Diterima'),('PN-0002','2','Peni Purnamawati','2','2','da2fd285e7dd3f7cc726912739c82efe.png','4149ca74bf8ee6256092c3b18841a015.png','2019-08-27','2','1961-03-08','2','2','Perempuan','Diterima'),('PN-0003','3','Anang Prasetyo','3','3','e6152f9b9211c09811dbe952f727c029.png','028cdcec1980458b1d111c077e7f5967.png','2019-08-11','3','1959-12-27','3','3','Laki-laki','Diterima'),('PN-0004','4','Rahmawati Hasannah','4','4','0ecd1617c8db6eb65ecd9c6e97fda12d.png','974330038d2b59898bae93427fa120dc.png','1917-02-04','4','1962-03-30','4','4','Perempuan','Diterima'),('PN-0005','5','Lena Melinda','5','5','1861935114906f3a4cc22e83aaa3f44e.png','3903982714ccb5c4f203950656f1baaa.png','1909-04-25','5','1962-03-01','5','5','Perempuan','Diterima'),('PN-0006','6','Nia Rosnia Hadijah','6','6','313a8f9a53e3e5751a496d1adff45f70.png','6dacaf70ef5558a910bb2df255c9d543.png','2019-08-07','6','1961-06-13','6','6','Laki-laki','Diterima'),('PN-0007','7','Reni Husni','7','7','daf03636f1df2c07628f58dedc52fdab.png','f9eaa887bb90dfefa30e4423ef2378ca.png','2019-08-04','7','1961-06-06','7','7','Perempuan','Diterima'),('PN-0008','8','Farah Nugraheni','8','8','a45ef86e0d655bb9cc892a8f53393706.png','fd6aa310fd7b5cb8a66fac9186bd3c21.png','2019-05-26','8','1962-01-31','8','8','Laki-laki','Diterima'),('PN-0009','9','Retno Dwi','9','9','25cc9c566c688435c0fbebd2d3084673.png','c6b06ce438a359c39ba056972cf4f6f7.png','2019-04-28','9','1960-02-03','9','9','Laki-laki','Diterima'),('PN-0010','10','Didit Adi Darmawan','10','10','13b831713f25d9c750415302e3903ea3.png','2917f53120c00a6f85f942ce4ccd8bbc.png','2019-08-19','10','1960-03-02','10','10','Perempuan','Diterima'),('PN-0011','11','Michael Purwadi','11','11','70fa8c27186f338a97f5dc1b14b84c23.png','fbd76d83c01a132036116151f07c3e2c.png','2019-11-08','11','1962-03-02','11','11','Laki-laki','Diterima');
 /*!40000 ALTER TABLE `tbl_pensiun` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +206,7 @@ CREATE TABLE `tbl_sub_kriteria` (
 
 LOCK TABLES `tbl_sub_kriteria` WRITE;
 /*!40000 ALTER TABLE `tbl_sub_kriteria` DISABLE KEYS */;
-INSERT INTO `tbl_sub_kriteria` VALUES ('SKR-00001','KR-00001','2< × =< 4 juta','4'),('SKR-00002','KR-00001','4 < × =< 6 juta','5'),('SKR-00005','KR-00002','57','5'),('SKR-00006','KR-00002','58','4'),('SKR-00010','KR-00003','50000000','5'),('SKR-00011','KR-00003','100000000','4'),('SKR-00015','KR-00004',' 1 tahun','5'),('SKR-00016','KR-00004','2 tahun','4'),('SKR-00018','KR-00005','1','5'),('SKR-00019','KR-00005','2','3'),('SKR-00020','KR-00005','3','2'),('SKR-0021','KR-00002','59','3');
+INSERT INTO `tbl_sub_kriteria` VALUES ('SKR-00001','KR-00001','2< × =< 4 juta','4'),('SKR-00002','KR-00001','4 < × =< 6 juta','5'),('SKR-00005','KR-00002','57','5'),('SKR-00006','KR-00002','58','4'),('SKR-00010','KR-00003','50000000','5'),('SKR-00011','KR-00003','100000000','4'),('SKR-00015','KR-00004','1 tahun','5'),('SKR-00016','KR-00004','2 tahun','4'),('SKR-00018','KR-00005','1','5'),('SKR-00019','KR-00005','2','3'),('SKR-00020','KR-00005','3','2'),('SKR-0021','KR-00002','59','3');
 /*!40000 ALTER TABLE `tbl_sub_kriteria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,4 +285,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-16  6:15:24
+-- Dump completed on 2019-08-18 11:15:55
