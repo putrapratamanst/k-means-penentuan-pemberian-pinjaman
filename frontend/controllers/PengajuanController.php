@@ -84,7 +84,7 @@ class PengajuanController extends Controller
         $userName = Yii::$app->user->identity->username;
 
         $idPensiun = TblAlternatif::find()->select(['id_pensiun'])->where(['nm_alternatif' => $userName])->one();
-        $dataPengajuan = Pengajuan::find()->where(['id_pensiun'=>$idPensiun])->one();
+        $dataPengajuan = Pengajuan::find()->where([ 'id_pensiun'=> $idPensiun ])->one();
 
         if (!$dataPengajuan)
         {

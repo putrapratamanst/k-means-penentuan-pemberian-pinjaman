@@ -45,6 +45,7 @@ class TblPensiunSearch extends TblPensiun
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination'=>false
         ]);
 
         $this->load($params);
@@ -72,7 +73,8 @@ class TblPensiunSearch extends TblPensiun
             ->andFilterWhere(['like', 'almt_pensiun', $this->almt_pensiun])
             ->andFilterWhere(['like', 'notelp_pensiun', $this->notelp_pensiun])
             ->andFilterWhere(['like', 'jk_pensiun', $this->jk_pensiun])
-            ->andFilterWhere(['like', 'status_pensiun', $this->status_pensiun]);
+            ->andFilterWhere(['like', 'status_pensiun', $this->status_pensiun])
+            ->orderBy(['id_pensiun' => SORT_ASC]);
 
         return $dataProvider;
     }
