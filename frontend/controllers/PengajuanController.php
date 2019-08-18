@@ -160,7 +160,7 @@ class PengajuanController extends Controller
         $sub1     = ArrayHelper::map($dataSub1, 'id_sub_kriteria', 'nm_sub_kriteria');
 
         $dataSub2 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00002"])->all();
-        $sub2     = ArrayHelper::map($dataSub2, 'id_sub_kriteria', 'nm_sub_kriteria');
+        // $sub2     = ArrayHelper::map($dataSub2, 'id_sub_kriteria', 'nm_sub_kriteria');
 
         $dataSub3 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00003"])->all();
         $sub3     = ArrayHelper::map($dataSub3, 'id_sub_kriteria', 'nm_sub_kriteria');
@@ -185,10 +185,16 @@ class PengajuanController extends Controller
         if ($umur == 59) {
             $dataUmur = "SKR-00009";
         }
+        $sub2     = $dataUmur;
 
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->sub2 = $sub2;
+
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -199,6 +205,7 @@ class PengajuanController extends Controller
             'sub3' => $sub3,
             'sub4' => $sub4,
             'dataUmur' => $dataUmur,
+            'umur' => $umur,
         ]);
     }
 

@@ -17,7 +17,7 @@ $dataPensiun = TblPensiun::find()->where(['nm_pensiun' =>$nama ])->one();
 
         <p class="lead">Halamant Pengajuan Kredit Pos Indonesia.</p>
 
-        <p><a class="btn btn-lg btn-danger" href="http://www.yiiframework.com">Status : <?=$dataPensiun->status_pensiun?></a></p>
+        <p><a class="btn-lg btn-danger">Status : <?=$dataPensiun->status_pensiun?></a></p>
     </div>
 
     <!-- <div class="body-content">

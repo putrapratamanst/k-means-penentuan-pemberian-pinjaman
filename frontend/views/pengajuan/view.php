@@ -11,7 +11,6 @@ $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Pengajuans', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
-$subName = TblSubKriteria::find();
 ?>
 <div class="pengajuan-view">
 
@@ -33,19 +32,38 @@ $subName = TblSubKriteria::find();
         'attributes' => [
             'id',
             'id_pensiun',
-            'sub1',
             [
                 'attribute' => 'sub1',
-                // 'value' => function($model) use ($subName)
-                // {
-                //     $nama = $subName->where(['id_sub_kriteria' => $subName])->one();
-                //     die(print_r($nama));
-                //     return $nama->nm_sub_kriteria;
-                // }
+                'value' => function($model)
+                {
+                    $nama = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub1 ])->one();
+                    return $nama->nm_sub_kriteria;
+                }
             ],
-            'sub2',
-            'sub3',
-            'sub4',
+            [
+                'attribute' => 'sub2',
+                'value' => function($model)
+                {
+                    $nama = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub2 ])->one();
+                    return $nama->nm_sub_kriteria;
+                }
+            ],
+            [
+                'attribute' => 'sub3',
+                'value' => function($model)
+                {
+                    $nama = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub3 ])->one();
+                    return $nama->nm_sub_kriteria;
+                }
+            ],
+            [
+                'attribute' => 'sub4',
+                'value' => function($model)
+                {
+                    $nama = TblSubKriteria::find()->where(['id_sub_kriteria' => $model->sub4 ])->one();
+                    return $nama->nm_sub_kriteria;
+                }
+            ],
         ],
     ]) ?>
 
