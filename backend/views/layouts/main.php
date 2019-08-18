@@ -59,7 +59,7 @@ AppAsset::register($this);
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="/" class="logo">
+            <a class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>POS</b></span>
                 <!-- logo for regular state and mobile devices -->

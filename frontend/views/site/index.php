@@ -4,11 +4,10 @@
 
 use frontend\models\TblPensiun;
 
-$this->title = 'My Yii Application';
 ?>
 <?php
 $nama = Yii::$app->user->identity->username;
-$dataPensiun = TblPensiun::find()->where(['nm_pensiun' =>$nama ])->one();
+$dataPensiun = TblPensiun::find()->where(['nm_pensiun' => $nama])->one();
 ?>
 <div class="site-index">
 
@@ -17,7 +16,15 @@ $dataPensiun = TblPensiun::find()->where(['nm_pensiun' =>$nama ])->one();
 
         <p class="lead">Halamant Pengajuan Kredit Pos Indonesia.</p>
 
-        <p><a class="btn-lg btn-danger">Status : <?=$dataPensiun->status_pensiun?></a></p>
+        <?php
+        if ($dataPensiun->status_pensiun == "Diterima") { ?>
+
+        <p><a class="btn-lg btn-primary">Status : Selamat, Pengajuan Kredit Anda Telah Diterima</a></p>
+
+        <?php  } else { ?>
+        <p><a class="btn-lg btn-danger">Status : <?= $dataPensiun->status_pensiun ?></a></p>
+
+        <?php } ?>
     </div>
 
     <!-- <div class="body-content">

@@ -146,7 +146,7 @@ class TblPensiunController extends Controller
         $model = $this->findModel($id);
         $model->status_pensiun = "Diterima";
         $model->save();
-        return $this->redirect('/site/index');
+        return $this->redirect('/pengajuan/tree-result');
 
         return $this->render('update', [
             'model' => $model,
@@ -158,7 +158,7 @@ class TblPensiunController extends Controller
         $model = $this->findModel($id);
         $model->status_pensiun = "Pengajuan";
         $model->save();
-        return $this->redirect('/site/index');
+        return $this->redirect('/pengajuan/tree-result');
 
         return $this->render('update', [
             'model' => $model,

@@ -91,6 +91,14 @@ class SiteController extends Controller
             {
                 return $this->redirect('/pengajuan/index-awal');
             }
+            if($username == "admin123")
+            {
+                return $this->redirect('/tbl-user/index');
+            }
+            if ($username == "manager123") {
+                return $this->redirect('/pengajuan/tree-result');
+            }
+
             return $this->goBack();
         } else {
             $model->password = '';
