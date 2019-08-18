@@ -15,7 +15,6 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="/tbl-kriteria/index/"><i class="fa fa-circle-o"></i> Kelola Kriteria</a></li>
-                            <li><a href="/tbl-alternatif/index/"><i class="fa fa-circle-o"></i> Kelola Alternatif</a></li>
                         </ul>
                     </li>
                     <li class="treeview menu">
@@ -34,7 +33,27 @@
                     </li>
                     <?php } ?>
                     <?php
-                    if (Yii::$app->user->identity->username == "manager123" ||  Yii::$app->user->identity->username == "admin123") {
+                    if (Yii::$app->user->identity->username == "manager123") {
+                        ?>
+
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="header">MAIN NAVIGATION</li>
+                        <li><a href="/"><i class="fa fa-home"></i> Beranda </a></li>
+
+                        <li class="treeview menu">
+                            <a href="#">
+                                <i class="fa fa-edit"></i> <span>Kelola Data</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/tbl-pensiun/index"><i class="fa fa-circle-o"></i> Kelola Pensiun</a></li>
+                            </ul>
+                        </li>
+                        <?php } ?>
+                        <?php
+                    if (Yii::$app->user->identity->username == "admin123") {
                         ?>
 
                     <ul class="sidebar-menu" data-widget="tree">

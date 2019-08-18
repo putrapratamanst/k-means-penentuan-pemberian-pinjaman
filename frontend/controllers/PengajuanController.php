@@ -107,7 +107,7 @@ class PengajuanController extends Controller
                 $dataUmur = "SKR-00009";
             }
 
-            $model->id_pensiun = $idPensiun;
+            $model->id_pensiun = $idPensiun->id_pensiun;
 
             $dataSub1 = TblSubKriteria::find()->where(['id_kriteria' => "KR-00001"])->all();
             $sub1     = ArrayHelper::map($dataSub1, 'id_sub_kriteria', 'nm_sub_kriteria');
@@ -132,6 +132,7 @@ class PengajuanController extends Controller
                 'sub3' => $sub3,
                 'sub4' => $sub4,
                 'dataUmur' => $dataUmur,
+                'umur' => $umur,
             ]);
         } else {
             return $this->render('view', [

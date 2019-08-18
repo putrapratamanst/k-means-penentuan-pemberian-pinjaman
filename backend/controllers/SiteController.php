@@ -61,6 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
         $searchModel = new TblPensiunSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -85,6 +86,11 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            $username = Yii::$app->user->identity->username;
+            if($username == "petkred123")
+            {
+                return $this->redirect('/pengajuan/index-awal');
+            }
             return $this->goBack();
         } else {
             $model->password = '';

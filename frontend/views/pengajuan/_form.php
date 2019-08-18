@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sub1')->dropDownList($sub1) ?>
 
-    <?= $form->field($model, 'sub2')->textInput(['readOnly' => true, 'value' => $dataUmur]) ?>
+    <?= $form->field($model, 'sub2')->textInput(['readOnly' => true, 'value' => $umur]) ?>
 
     <?= $form->field($model, 'sub3')->dropDownList($sub3) ?>
 

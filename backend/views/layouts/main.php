@@ -188,6 +188,6 @@ AppAsset::register($this);
 <?php $this->endPage() ?>
 <style>
 pre{
-    display: none
+    display: none !important
 }
 </style>

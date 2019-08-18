@@ -49,9 +49,9 @@
             "authors": [
                 {
                     "name": "2amigOS! Consulting Group",
+                    "role": "Developer",
                     "email": "hola@2amigos.us",
-                    "homepage": "http://2amigos.us",
-                    "role": "Developer"
+                    "homepage": "http://2amigos.us"
                 }
             ],
             "description": "Bootstrap DatePicker widget for Yii2.",
@@ -228,9 +228,9 @@
             "authors": [
                 {
                     "name": "Carsten Brandt",
+                    "role": "Creator",
                     "email": "mail@cebe.cc",
-                    "homepage": "http://cebe.cc/",
-                    "role": "Creator"
+                    "homepage": "http://cebe.cc/"
                 }
             ],
             "description": "A super fast, highly extensible markdown parser for PHP",
@@ -3765,8 +3765,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
