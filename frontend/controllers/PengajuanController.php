@@ -105,7 +105,7 @@ class PengajuanController extends Controller
             }
             if($umur == 59)
             {
-                $dataUmur = "SKR-00009";
+                $dataUmur = "SKR-0021";
             }
 
             $model->id_pensiun = $idPensiun->id_pensiun;
