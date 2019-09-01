@@ -126,6 +126,9 @@ class PengajuanController extends Controller
 
             if ($model->load(Yii::$app->request->post())) {
                 $model->sub2 = $sub2;
+                date_default_timezone_set("Asia/Bangkok");
+
+                $model->created_date = date('Y-m-d h:i:s');
                 $model->save();
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -190,9 +193,7 @@ class PengajuanController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-
             $model->sub2 = $sub2;
-
 
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);

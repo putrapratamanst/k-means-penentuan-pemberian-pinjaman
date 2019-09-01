@@ -30,7 +30,7 @@ class Pengajuan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_pensiun', 'sub1', 'sub2', 'sub3', 'sub4'], 'string', 'max' => 45],
+            [['id_pensiun', 'sub1', 'sub2', 'sub3', 'sub4', 'created_date'], 'string', 'max' => 45],
         ];
     }
 
