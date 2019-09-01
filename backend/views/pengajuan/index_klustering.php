@@ -66,14 +66,23 @@ $this->params['breadcrumbs'][] = $this->title;
             'jangka_waktu',
             'dc2',
             'dc1',
-                        [
-                'attribute' => 'c1',
-                'label' => 'C1 (Layak)',
-            ],
             [
-                'attribute' => 'c2',
-                'label' => 'C2 (Tidak Layak)',
+                'attribute' => 'c1',
+                'label' => 'Kelayakan',
+                'value'=> function($model)
+                {
+                    if ($model['c1'] == "-")
+                    {
+                        return "C2 (Tidak Layak)";
+                    } else {
+                        return "C1 (Layak)";
+                    }
+                }
             ],
+            // [
+            //     'attribute' => 'c2',
+            //     'label' => 'C2 (Tidak Layak)',
+            // ],
 
         ],
     ]); ?>
@@ -140,15 +149,26 @@ $this->params['breadcrumbs'][] = $this->title;
             'jangka_waktu',
             'dc2',
             'dc1',
-                        [
-                'attribute' => 'c1',
-                'label' => 'C1 (Layak)',
-            ],
-            [
-                'attribute' => 'c2',
-                'label' => 'C2 (Tidak Layak)',
-            ],
+        //             [
+        //     'attribute' => 'c1',
+        //     'label' => 'C1 (Layak)',
+        // ],
+        // [
+        //     'attribute' => 'c2',
+        //     'label' => 'C2 (Tidak Layak)',
+        // ],
 
+        [
+            'attribute' => 'c1',
+            'label' => 'Kelayakan',
+            'value' => function ($model) {
+                if ($model['c1'] == "-") {
+                    return "C2 (Tidak Layak)";
+                } else {
+                    return "C1 (Layak)";
+                }
+            }
+        ],
 
 
         ],
@@ -216,15 +236,26 @@ $this->params['breadcrumbs'][] = $this->title;
             'jangka_waktu',
             'dc2',
             'dc1',
-                        [
-                'attribute' => 'c1',
-                'label' => 'C1 (Layak)',
-            ],
-            [
-                'attribute' => 'c2',
-                'label' => 'C2 (Tidak Layak)',
-            ],
+        //             [
+        //     'attribute' => 'c1',
+        //     'label' => 'C1 (Layak)',
+        // ],
+        // [
+        //     'attribute' => 'c2',
+        //     'label' => 'C2 (Tidak Layak)',
+        // ],
 
+        [
+            'attribute' => 'c1',
+            'label' => 'Kelayakan',
+            'value' => function ($model) {
+                if ($model['c1'] == "-") {
+                    return "C2 (Tidak Layak)";
+                } else {
+                    return "C1 (Layak)";
+                }
+            }
+        ],
 
         ],
     ]); ?>
@@ -291,14 +322,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'jangka_waktu',
         'dc2',
         'dc1',
-                    [
-                'attribute' => 'c1',
-                'label' => 'C1 (Layak)',
-            ],
-            [
-                'attribute' => 'c2',
-                'label' => 'C2 (Tidak Layak)',
-            ],
+        //         [
+        //     'attribute' => 'c1',
+        //     'label' => 'C1 (Layak)',
+        // ],
+        // [
+        //     'attribute' => 'c2',
+        //     'label' => 'C2 (Tidak Layak)',
+        // ],
+        [
+            'attribute' => 'c1',
+            'label' => 'Kelayakan',
+            'value' => function ($model) {
+                if ($model['c1'] == "-") {
+                    return "C2 (Tidak Layak)";
+                } else {
+                    return "C1 (Layak)";
+                }
+            }
+        ],
 
 
         ],
